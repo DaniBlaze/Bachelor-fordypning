@@ -1,0 +1,94 @@
+\section{Netto nåverdimetoden}
+Vi har i denne oppgaven valgt å besvare problemstillingen i lys av netto nåverdimetoden, da investeringen krever en flerperiodisk analyse (Espen Skaldehaug. forelesningsnotater/veiledningstime). Netto nåverdimetoden finner lønnsomheten til en investering ved å neddiskontere nåverdien av de fremtidige kontantstrømmene. Til tross for at NNV er den anbefalte metoden byr den på utfordringer. Estimering av fremtidige kontanstrømmer er i utgangspunktet umulig, men med fornuftige forutsetnigner og god markedsforståelse er det mulig å gjøre presise anslag. 
+
+\indent \newline
+\begin{math}
+NNV={-X_0} + \frac {Xn}{1+r^n}
+\end{math}
+
+\indent \newline
+Metoden belyser viktige momenter rundt tidshorisont og usikkerhet. Kroneverdien vil endres over tid, dette kan forklares med at man alternativt kunne plassert pengene der de vil forrente seg, inflasjon, og det faktum at det i prosjekter er knyttet usikkerhet til de fremtidige kontantstrømmene, og man vil ha kompensasjon for dette. Avkastningskravet vil hensynta denne usikkerheten. 
+
+\indent \newline
+En normal antakelse i forbindelse med bruk av netto nåverdimetoden er at man ønsker å maksimere eiernes profitt. Med bakgrunn i dette sier teorien at man alltid skal akseptere prosjekter med netto nåverdi > 0. I praksis vil dette bety en ekstraordinær avkastning på investert kapital. Dersom svaret blir positivt krever dette forklaring, gjerne gjennom effisiens-begrepet. 
+
+\subsection*{Totalkapitalmetoden}
+For å finne kontantstrømmen som skal tilkomme både eiere og långivere brukes totalkapitalmetoden. Metoden tar i bruk kontantstrømmen fra driften, finansielle poster utelukkes (Bøhren, Michalsen, Norli. S.351). Avkastningskravet skal reflektere avkastningen man alternativt kunne oppnådd ved å plassere midlene et annet sted med lik risiko (eStudie). WACC (Weighted average cost of capital) blir det relevante avkastningskravet ettersom modellen hensyntar investeringens finansiering gjennom en vekting av egenkapitalen og gjelden.
+
+\[kT = kE * \frac{E}{E + G} + kG * (1-S) * \frac{G}{E + G}\]
+
+\textit{hvor:
+\begin{itemize}
+    \item[] $kT$ = totalkapitalkostnaden etter skatt
+    \item[] $kE$ = egenkapitalkostnaden etter skatt
+    \item[] $kG$ = effektiv lånerente før skatt
+    \item[] $s$ = relevant skattesats
+    \item[] $E$ = egenkapitalens markedsverdi
+    \item[] $G$ = gjeldens markedsverdi
+\end{itemize}
+}
+
+\subsection*{Egenkapitalmetoden}
+I egenkapitalmetoden er målet å finne kontantstrømmen til eierne. Sammenlignet med totalkapitalmetoden vil vi nå justere telleren for gjeldsopptak, renter og avdrag, inklusive renteskattefordelen (Bøgren, Michalsen, Norli. S.351). Kontantstrømmen vil så neddiskonteres med et avkastningskrav som reflekterer eiernes finansielle risiko. Det relevante avkastningskravet ved bruk av denne metoden er CAPM (Capital Asset Pricing Model).
+
+\[kE = rf * (1-S) + \beta ek * [E(rm)-rf * (1-S)] \]
+
+\textit{hvor:
+\begin{itemize}
+    \item[] $kE$ = egenkapitalkostnaden etter skatt
+    \item[] $rf$ = risikofri rente
+    \item[] $\beta ek$ = egenkapitalbeta
+    \item[] $E(rm)$ = forventet avkastning på markedsporteføljen
+    \item[] $s$ = skattesats
+\end{itemize}
+}
+https://www.reuters.com/finance/stocks/overview/ROCKb.CO
+
+\subsection{Estimering av risikofri rente \texorpdfstring{$(rf)$}{}}
+Risikofri rente er avkastning en investor kan forvente å få uten å påta seg risiko. Et mål som ofte blir brukt på risikofri rente er statsobligasjoner. Den eneste måten man ikke skal kunne få denne avkastningen er hvis staten ikke klarer å betale sine forpliktelser. Rentenivået varier med løpetiden til statsobligasjonene, og det er derfor hensiktsmessig å velge rente på statsobligasjoner som er relevant for prosjektets levetid. Vi benytter derfor en effektiv rente på 10-års statsobligasjoner som risikofri rente. Per april 2019 var denne 1,71\%. https://www.norges-bank.no/tema/Statistikk/Rentestatistikk/Statsobligasjoner-Rente-Manedsgjennomsnitt-av-daglige-noteringer/
+
+\subsection{Markedets risikopremie \texorpdfstring{$[E(rm) - rf *(1 - s)]$}{}}
+Markedets risikopremie er den meravkastningen man krever ved å påta seg risiko. For å gjøre beregninger rundt dette er det nødvendig å se på de historiske dataene, da det ikke finnes noen god modell for å beregne fremtidige risikopremier. Fra 1976-2015 var den årlige norske risikopremien på 6,4\% (finansboka), men trenden de siste 20 årene har dog vært avtakende. PwC ferdigstilte i desember 2018 sitt mål for markedspremien, og denne lå på 5\%. Dette blir også vårt grunnlag for beregningen videre. 
+
+https://www.pwc.no/no/publikasjoner/risikopremien-2018.html
+
+\subsection{Estimering av betaverdi \texorpdfstring{($\beta ek$)}{}}
+\[kE = rf * (1-S) + \beta ek * [E(rm)-rf * (1-S)] \]
+\[0,0171 * 0,78 + 0,7 * (0,05 - 0,0171 * 0,78)= 3,9\%\]
+
+\subsection{Blumes justeringsmodell}
+Analyser gjennomført av Marshall Blume viser at selskapers BETA-verdier tenderer å bevege seg mot 1, og at selskaper med BETA-verdier nærme 1, er mer stabile enn de som er lengre unna. Blume mente derfor at det er hensiktsmessig å justere betaen ved følgende modell:
+
+\[\beta justert = \beta raw * P +1,0 *(1-P)\]
+Nyere forskning viser til at dette er fornuftig, derfor vil vi justere betaen for “mean reversion”. (forelesningsnotater “beregning av avkastningskrav” Pål Bertling-Hansen)
+
+https://www.magma.no/hvordan-handtere-landrisiko-ved-investeringsbeslutninger1
+https://www.infrontanalytics.com/fe-en/30064SD/Rockwool-International-A-S/Beta
+
+\subsection{Beregning av egenkapitalens avkastningskrav (CAPM)}
+\subsection{Totalkapitalens avkastningskrav}
+\subsection{Internrentemetoden}
+Internrentemetoden viser hvilket avkastningskrav som vil gi en avkastning på null i en netto nåverdiberegning. Metoden vil i vår oppgave kun bli brukt til å belyse hva som vil være høyeste mulig avkastningskrav for en lønnsom investering, da alle avkastningskrav høyere enn denne vil gi en negativ nåverdi.  
+
+\subsection{Konsistensbetingelser}
+En forutsetning for at netto nåverdimetoden skal forme et realistisk bilde av lønnsomheten i prosjektet er at konsistensbetingelsene legges til grunn. Med dette menes blant annet at man har frihet til å velge nominelle eller reelle tallstørrelser før eller etter skatt så lenge valgt metode er lik i teller og nevner. Vårt standpunkt tar utgangspunkt i de 5 grunnleggende konsistensbetingelsene (Forelesningsnotater).
+
+\begin{itemize}
+\item Nominelle tall - Tallene vi bruker vil være nominelle, altså vil inflasjon være hensyntatt. 
+\item Etter skatt: Utregning av kontantstrøm og avkastningskrav vil bli beregnet etter fratrukket skatt ettersom skattereduksjonen aldri er lik i teller og nevner (forelesningsnotater).
+\item Periodelengde: Teknisk levetid på investeringen vil antas å ha en levetid på 10 år, mens den økonomiske levetiden er antatt å være 20 år.
+\item Kontantstrømmen: Bruke TK og eller EK ?
+\item Risiko: Ettersom investeringen er av en ny teknologi som tidligere ikke er utprøvd foreligger det usikkerhet vedrørende investeringen. Usikkerheten knyttet til kontantstrømmene vil bli synliggjort i avkastningskravet. 
+\end{itemize}
+
+\subsection{Markedseffisiens}
+Netto nåverdinalysen blir ikke tilstrekkelig uten å redegjøre for effisiensbegrepet. Et effisient marked betyr at all informasjon er priset inn i markedet. Dersom dette er sant vil det ikke være mulig å oppnå en ekstraordinær avkastning utover avkastningskravet. 
+En NNV>0 betyr at investeringen har gitt en ekstraordinær avkastning.  
+
+\subsection{Stikkord}
+Effisient marked: Prisene reflekterer all relevant informasjon, NNV>0 er utenkelig, kontantstrømmen regnet for høy eller avkastningskravet for lavt, kombinasjon.
+Ineffisient marked: AS ROCKWOOL vet noe de andre ikke vet (informasjonen varer ikke evig). Kan ha hef10 konkurransefortrinn. 
+
+
+
+
