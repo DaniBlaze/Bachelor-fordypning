@@ -22,6 +22,7 @@
 \usepackage{ragged2e}
 \usepackage[nottoc,notlot,notlof]{tocbibind}
 \usepackage[norsk]{babel}
+\usepackage[final]{pdfpages}
 
 \definecolor{rockwoolcolor}{RGB}{155,0,0}
 
@@ -116,8 +117,17 @@
 \chapter{Teori}
 \input{kapittel/teori}
 
-\chapter{Empiri (endre til makroforhold?)}
-\input{kapittel/empiri}
+\chapter{Makroøkonomiske forhold}
+\input{kapittel/makroforhold}
+
+\chapter{Spesifisering av data}
+\input{kapittel/spesifisering}
+
+\chapter{Lønnsomhetsberegning - Netto nåverdi}
+\input{kapittel/lonnsomhet}
+
+\chapter{Sensitivitetsanalyse}
+\input{kapittel/sensitivitetsanalyse}
 
 % chapter heading as preface and toc
 \titleformat{\chapter}[display]
@@ -132,4 +142,16 @@
 \bibliography{mineReferanser}		% expects file "mineReferanser.bib"
 }
 
+\cleardoublepage
+\renewcommand\appendixpagename{Appendiks}
+\appendix
+\appendixpage
+\chapter{Rockwool beta regresjon}
+\input{appendiks/rockwoolbetaregresjon}
+
+\chapter{Rockwool kontantstrømmer}
+\input{appendiks/kontantstrommer}
+
+\chapter{Logg}
+\input{appendiks/logg}
 \end{document}
